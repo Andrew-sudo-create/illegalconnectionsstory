@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Story: Illegal Connections</title>
+    <link rel="stylesheet" href="story.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="African Energy Always Logo">
+        </div>
+        <nav>
+            <button onclick="startGame()">Home</button>
+            <button onclick="alert('This interactive project raises awareness about illegal electricity connections.')">More Info</button>
+            <button onclick="location.reload()">Restart</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <section class="scenario-box">
+            <h1>Illegal Connections in Randburg</h1>
+            <div id="story-text"></div>
+        </section>
+
+        <section class="choices" id="choices"></section>
+    </div>
+
+    <script src="best.js"></script>
+</body>
+</html>
