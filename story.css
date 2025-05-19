@@ -7,14 +7,108 @@ body {
     color: #fff;
 }
 
-
 header {
+    display: flex;
+    justify-content: space-between; /* Aligns logo to left, nav to right */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Example background */
+}
+
+.logo img {
+    max-height: 50px; /* Adjust as needed */
+}
+
+/* Navigation Styling - Desktop */
+#main-nav .nav-links {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+#main-nav .nav-links button {
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#main-nav .nav-links button:hover {
+    background-color: #e9e9e9;
+}
+
+/* Burger Icon - Hidden on Desktop by default */
+.burger-icon {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10; /* Ensure it's above other content if menu overlays */
+}
+
+.burger-icon .burger-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Mobile Styles - Adjust breakpoint as needed --- */
+@media (max-width: 768px) {
+    #main-nav .nav-links {
+        display: none; /* Hide regular nav links */
+        flex-direction: column; /* Stack them vertically */
+        width: 100%;
+        position: absolute; /* Position it below the header */
+        top: 70px; /* Adjust based on your header's height */
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    #main-nav .nav-links.active {
+        display: flex; /* Show when active */
+    }
+
+    #main-nav .nav-links button {
+        width: 100%;
+        text-align: left;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 0;
+    }
+    #main-nav .nav-links button:last-child {
+        border-bottom: none;
+    }
+
+    .burger-icon {
+        display: flex; /* Show burger icon on mobile */
+    }
+
+    /* Optional: Animate burger to an "X" when active */
+    .burger-icon.active .burger-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg); /* Adjust 8px based on height/spacing */
+    }
+    .burger-icon.active .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+    .burger-icon.active .burger-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg); /* Adjust 8px */
+    }
+}
+/* header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 40px;
     background-color: rgba(0, 0, 0, 0.6);
-}
+} */
 
 input{
     border: none;
@@ -52,9 +146,7 @@ nav button {
     cursor: pointer;
 }
 
-nav button:hover {
-    background-color: #1b4e43;
-}
+
 
 /* Main Container */
 .container {

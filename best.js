@@ -5,6 +5,25 @@ function addFact(text) {
   return `\n\n<div class="fact">${text}</div>`;
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const burgerIcon = document.getElementById('burger-icon');
+    const navLinksContainer = document.getElementById('nav-links-container');
+
+    if (burgerIcon && navLinksContainer) {
+        burgerIcon.addEventListener('click', () => {
+            // Toggle the .active class on the nav links container
+            navLinksContainer.classList.toggle('active');
+
+            // Toggle the .active class on the burger icon itself (for X animation)
+            burgerIcon.classList.toggle('active');
+
+            // Update ARIA attribute for accessibility
+            const isExpanded = navLinksContainer.classList.contains('active');
+            burgerIcon.setAttribute('aria-expanded', isExpanded);
+        });
+    }
+});
+
 /* cookie helpers */
 function setCookie(name, value, days) {
   const d = new Date();
