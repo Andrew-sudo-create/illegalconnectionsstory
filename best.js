@@ -44,10 +44,13 @@ function yesNoConfirm(msg) {
     const o = document.createElement('div');
     o.className = 'modal-overlay';
     o.innerHTML = `
-      <div class="modal">
+      <div class="modal-mine">
         <p>${msg}</p>
+        <div>
         <button id="yesBtn">Yes</button>
         <button id="noBtn">No</button>
+        </div>
+        
       </div>`;
     document.body.appendChild(o);
     o.querySelector('#yesBtn').onclick = () => { o.remove(); res(true); };

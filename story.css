@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: url('sunset.jpg') no-repeat center center fixed;
+    background: url('images/sunset.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
 }
@@ -113,13 +113,23 @@ header {
 input{
     border: none;
 }
-
+#story-text{
+    color: #fff;
+}
+label{
+    color: #fff;
+}
 form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
    
+}
+
+#name-form{
+    display: block;
+    text-align: center;
 }
 
 input,select,textarea{
@@ -179,7 +189,7 @@ nav button {
 }
 
 .choice-card, #choices button{
-    background:#007bff;
+    background:rgba(35, 80, 70, 0.9);
     color:#fff;
     padding:15px 20px;
     margin:10px;
@@ -191,9 +201,6 @@ nav button {
     max-width:320px;
   }
 
-.choice-card:hover, #choices button:hover{
-    background:#0056b3;
-}
 
 /* alternatives table */
 table{
@@ -252,17 +259,21 @@ table{
   .modal-overlay{
     position:fixed;inset:0;
     background:rgba(0,0,0,.5);
-    display:flex;justify-content:center;align-items:center;
-    z-index:1000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
   }
   /* modal box */
-  .modal{
+  .modal-mine{
     background:#007bff;
     padding:1.5rem 2rem;
     border-radius:.5rem;
     box-shadow:0 4px 12px rgba(0,0,0,.25);
     max-width:420px;
     text-align:center;
+    color: #fff;
+    text-align: center;
   }
   .modal button{
     margin:.5rem 1rem;
