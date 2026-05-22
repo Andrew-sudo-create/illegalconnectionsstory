@@ -20,33 +20,7 @@ Illegal Connections is an interactive web-based story created to educate users a
 
 - A modern browser (Chrome, Firefox, Edge, Safari)
 - (Optional) Node.js and npm, if you wish to run a local development server
-
-### Running Locally
-
-1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/Andrew-sudo-create/illegalconnectionsstory.git
-   cd illegalconnectionsstory
-   ```
-2. **Open the project**  
-   - Double-click `index.html` or serve with a local web server for best results.
-
-### File Structure
-
-- `index.html` – Main entry point
-- `style.css` – Stylesheet
-- `script.js` – Story logic and interactivity
-
-## Screenshots
-
-<!-- You can add screenshots here by uploading images and inserting them like: -->
-<!-- ![Screenshot 1](screenshots/screenshot1.png) -->
-
-## Contributing
-
-Contributions are welcome!  
-If you'd like to suggest improvements, report issues, or collaborate, please open an [issue](https://github.com/Andrew-sudo-create/illegalconnectionsstory/issues) or a [pull request](https://github.com/Andrew-sudo-create/illegalconnectionsstory/pulls).
-
+  
 ## License
 
 This project is for educational purposes.  
